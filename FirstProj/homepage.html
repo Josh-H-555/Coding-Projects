@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            The World of Lordran
+        </title>
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="custom.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <div class="main">
+            <h2>Welcome, Chosen Undead.</h2>
+            <p>
+            Here, we can explore the world created by FromSoftware. The World of Dark Souls.
+            So far, there have been three games in their series, Dark Souls 1-3. Each with their
+            own story, but interwoven elements in between, and recurring themes.
+            </p>
+        </div>
+        <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#collapsable">The Story So Far</button>
+        <div id="collapsable" class="collapse">
+            <p>
+            In the Age of Ancients, the world was unformed, shrouded by fog.
+            A land of grey crags, archtrees, and everlasting dragons.
+            But then there was fire, and with fire came disparity.
+            And thus the lords rose, and soon began the Age of Fire.
+            This is the land that you are thrust into.
+            </p>
+            <p>
+            The fire fades, and soon, only dark will remain. Will you rekindle the dwindling flame?
+            Or will you usher in a new Age of Darkness? The choice is yours, if you can make it.
+            </p>
+            <p>
+            Click the links below to learn specific details on each game entry.
+            </p>
+        </div>
+        <hr>
+        <a class="btn btn-dark" href="DarkSouls1.html" role="button">Dark Souls 1</button></a>
+        <a class="btn btn-dark" href="DarkSouls2.html" role="button">Dark Souls 2</button></a>
+        <a class="btn btn-dark" href="DarkSouls3.html" role="button">Dark Souls 3</button></a>
+        <hr>
+        <p>Want to test your knowledge?</p>
+        <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#quizCollapse">Take A Quiz!</button>
+        <div id="quizCollapse" class="collapse">
+            <div id="quiz"></div>
+            <button id="submit">Submit Quiz</button>
+            <div id="results"></div>
+            <script src="home.js"></script>
+        </div>
+
+
+    </body>
+</html>

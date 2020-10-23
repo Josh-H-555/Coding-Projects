@@ -1,0 +1,14 @@
+body
+{
+    background-color: black;
+    color: orange;
+    font-family: "Snell Roundhand", cursive;
+    text-align: center;
+    font-size: large;
+}
+
+.collapse, .main, .quizCollapse
+{
+    white-space: pre;
+    text-align: center;
+}
