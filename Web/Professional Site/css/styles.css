@@ -1,0 +1,32 @@
+.top-container {
+    background-color: #E4F9F5;
+    position: relative;
+    height: 100%;
+}
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 30%;
+    top: 20%
+}
+
+.cloud-header-container {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 30%;
+    top: 80%;
+}
+
+
+.pro {
+    text-decoration: underline;
+}
