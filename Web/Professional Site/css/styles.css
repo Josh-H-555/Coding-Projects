@@ -3,9 +3,20 @@
     position: relative;
     height: 100%;
 }
+
 body {
     margin: 0;
     text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Pacifico', sans-serif;
+}
+
+h2,
+h3 {
+    font-family: 'Fredoka', sans-serif;
 }
 
 .top-cloud {

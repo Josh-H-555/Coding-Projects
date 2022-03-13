@@ -1,0 +1,25 @@
+section,
+article {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+header,
+nav,
+aside,
+footer {
+    border: 2px solid black;
+}
+
+section,
+article,
+header,
+nav,
+footer {
+    min-height: 50px;
+}
+
+aside {
+    min-height: 108px;
+}
