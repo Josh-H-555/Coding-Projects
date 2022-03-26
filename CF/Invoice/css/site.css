@@ -1,0 +1,13 @@
+hr {
+    display: block;
+    color: gray;
+    border-style: none;
+    border: 0;
+    height: 2px;
+}
+
+@media print {
+    .noprint {
+        visibility: hidden;
+    }
+}
