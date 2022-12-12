@@ -11,6 +11,10 @@ public class ArrayStructures
         {
             theArray[i] = (int)(Math.random()*10) + 10;
         }
+
+        int myStaticValue = (int)(Math.random() * 10);
+        theArray[myStaticValue] = 14;
+
     }
 
     public void printArray()
@@ -88,6 +92,62 @@ public class ArrayStructures
         return values;
     }
 
+    public void selectSort()
+    {
+        for (int i = 0; i < arraySize - 1; ++i)
+        {
+            for (int ix = i + 1; ix < arraySize; ++ix)
+            {
+                if (theArray[i] > theArray[ix])
+                {
+                    int temp = theArray[i];
+                    theArray[i] = theArray[ix];
+                    theArray[ix] = temp;
+                }
+            }
+        }
+    }
+
+    public void bubbleSort()
+    {
+        for (int i = arraySize - 1; i > 1; --i)
+        {
+            boolean swap = false;
+            for (int ix = 0; ix < i; ++i)
+            {
+                if (theArray[ix] > theArray[ix+1])
+                {
+                    swap = true;
+                    int temp = theArray[ix];
+                    theArray[ix] = theArray[ix+1];
+                    theArray[ix+1] = temp;
+                }
+            }
+            if (!swap)
+            {
+                return;
+            }
+        }
+    }
+
+    public void insertionSort()
+    {
+        for (int i = 1; i < arraySize; ++i)
+        {
+            int ix = i;
+
+            int toInsert = theArray[i];
+            while ((ix > 0) && (theArray[ix-1] > toInsert))
+            {
+                theArray[ix] = theArray[ix-1];
+                --ix;
+            }
+
+            theArray[ix] = toInsert;
+        }
+    }
+
+
     public int iterativeBinarySearch(int value)
     {
         int low = 0;
@@ -132,12 +192,12 @@ public class ArrayStructures
 
         else if (theArray[i] < value)
         {
-            recursiveBinarySearch(value, i + 1, high);
+            return recursiveBinarySearch(value, i + 1, high);
         }
 
         else
         {
-            recursiveBinarySearch(value, low, i - 1);
+            return recursiveBinarySearch(value, low, i - 1);
         }
 
     }
@@ -154,15 +214,35 @@ public class ArrayStructures
 
         System.out.println(newArray.doesArrayContainValue(18));
 
-        newArray.deleteIndex(4);
+        //newArray.deleteIndex(4);
 
         newArray.printArray();
 
-        newArray.insertValue(50);
+        newArray.insertValue(16);
 
         newArray.printArray();
 
-        newArray.linearSearch(17);
+        System.out.println(newArray.linearSearch(14));
+
+        newArray.selectSort();
+
+        newArray.printArray();
+
+        System.out.println(newArray.linearSearch(14));
+
+        System.out.println(newArray.iterativeBinarySearch(14));
+
+        System.out.println(newArray.recursiveBinarySearch(14, 0, newArray.arraySize));
+
+        newArray.generateRandomArray();
+
+        newArray.bubbleSort();
+
+        newArray.printArray();
+
+        newArray.generateRandomArray();
+
+        newArray.insertionSort();
 
     }
 }
