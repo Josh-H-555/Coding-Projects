@@ -147,6 +147,38 @@ public class ArrayStructures
         }
     }
 
+    public void shellShort()
+    {
+        int inner, outer, temp;
+
+        int interval = 1;
+
+        while (interval <= arraySize / 3)
+        {
+            interval = interval * 3 + 1;
+
+            while (interval > 0)
+            {
+                for (outer = interval; outer < arraySize; ++outer)
+                {
+                    temp = theArray[outer];
+
+                    inner = outer;
+
+                    while (inner > interval - 1 && theArray[inner - interval] >= temp)
+                    {
+                        theArray[inner] = theArray[inner - interval];
+
+                        inner -= interval;
+                    }
+
+                    theArray[inner] = temp;
+                }
+                interval = (interval - 1) / 3;
+            }
+        }
+    }
+
 
     public int iterativeBinarySearch(int value)
     {
@@ -243,6 +275,8 @@ public class ArrayStructures
         newArray.generateRandomArray();
 
         newArray.insertionSort();
+
+        newArray.printArray();
 
     }
 }

@@ -24,8 +24,23 @@
 
 // result = something ? 7 : 302; true -> 7, false -> 302
 
+// operator overloading: Order newOrder = oldOrder + newItem;
+
+// bool A::operator<(B const& something) { BODY HERE }
+
+// C++ encapsulation, 'friend' keyword allows function to access private member variables. cool!
+
+// auto operator<=> . . . compiler generates all less than, greater than, equal to, etc.
+
 #include "Header Files/Person.h"
 #include <iostream>
+#include <string>
+
+using std::string;
+
+#include <format>
+using std::format;
+
 enum class FileError
 {
     notfound,
@@ -48,8 +63,11 @@ int main()
     fe = FileError::ok;
 
     Person p1("Josh", "Hutchinson", 123);
+    string p1Summary = format("p1: {} {}", p1.getName(), p1.getName());
     Person p2("Someone", "Else", 321);
-    std::string name = p1.getName();
+    p2 = p1 + 7;
+
+    p1 = 4 + p2;
 
     return 0;
 }
